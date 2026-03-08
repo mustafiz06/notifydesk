@@ -18,12 +18,13 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
-            $table->string('phone')->nullable()->after('email');
-            $table->string('company')->nullable()->after('phone');
-            $table->text('bio')->nullable()->after('company');
-            $table->string('avatar_path')->nullable()->after('bio');
-            $table->json('preferences')->nullable()->after('avatar_path');
-            $table->timestamp('last_login_at')->nullable()->after('remember_token');
+            $table->string('phone')->nullable();
+            $table->string('phone')->nullable();
+            $table->string('role')->default('user');
+            $table->text('bio')->nullable();
+            $table->string('avatar_path')->nullable();
+            $table->json('preferences')->nullable();
+            $table->timestamp('last_login_at')->nullable();
             $table->timestamps();
         });
 
