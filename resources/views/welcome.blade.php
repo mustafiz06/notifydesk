@@ -8,7 +8,7 @@
 @stop
 
 @section('content')
-    <p>Welcome to your new AdminLTE panel.</p>
+    <p>Welcome to your new Notify Desk panel.</p>
 @stop
 
 @section('css')
