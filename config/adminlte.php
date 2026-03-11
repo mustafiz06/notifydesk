@@ -6,15 +6,9 @@ return [
     |--------------------------------------------------------------------------
     | Title
     |--------------------------------------------------------------------------
-    |
-    | Here you can change the default title of your admin panel.
-    |
-    | For detailed instructions you can look the title section here:
-    | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/Basic-Configuration
-    |
     */
 
-    'title' => 'AdminLTE 3',
+    'title' => 'NotifyDesk',
     'title_prefix' => '',
     'title_postfix' => '',
 
@@ -22,172 +16,67 @@ return [
     |--------------------------------------------------------------------------
     | Favicon
     |--------------------------------------------------------------------------
-    |
-    | Here you can activate the favicon.
-    |
-    | For detailed instructions you can look the favicon section here:
-    | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/Basic-Configuration
-    |
     */
 
-    'use_ico_only' => false,
-    'use_full_favicon' => false,
+    'favicon' => ['path' => 'favicon.ico', 'type' => 'image/x-icon'],
 
     /*
     |--------------------------------------------------------------------------
-    | Google Fonts
+    | Logo
     |--------------------------------------------------------------------------
-    |
-    | Here you can allow or not the use of external google fonts. Disabling the
-    | google fonts may be useful if your admin panel internet access is
-    | restricted somehow.
-    |
-    | For detailed instructions you can look the google fonts section here:
-    | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/Basic-Configuration
-    |
     */
 
-    'google_fonts' => [
-        'allowed' => true,
-    ],
-
-    /*
-    |--------------------------------------------------------------------------
-    | Admin Panel Logo
-    |--------------------------------------------------------------------------
-    |
-    | Here you can change the logo of your admin panel.
-    |
-    | For detailed instructions you can look the logo section here:
-    | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/Basic-Configuration
-    |
-    */
-
-    'logo' => '<b>Admin</b>LTE',
+    'logo' => '<b>Notify</b>Desk',
     'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
-    'logo_img_alt' => 'Admin Logo',
-
-    /*
-    |--------------------------------------------------------------------------
-    | Authentication Logo
-    |--------------------------------------------------------------------------
-    |
-    | Here you can setup an alternative logo to use on your login and register
-    | screens. When disabled, the admin panel logo will be used instead.
-    |
-    | For detailed instructions you can look the auth logo section here:
-    | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/Basic-Configuration
-    |
-    */
-
-    'auth_logo' => [
-        'enabled' => false,
-        'img' => [
-            'path' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
-            'alt' => 'Auth Logo',
-            'class' => '',
-            'width' => 50,
-            'height' => 50,
-        ],
-    ],
-
-    /*
-    |--------------------------------------------------------------------------
-    | Preloader Animation
-    |--------------------------------------------------------------------------
-    |
-    | Here you can change the preloader animation configuration. Currently, two
-    | modes are supported: 'fullscreen' for a fullscreen preloader animation
-    | and 'cwrapper' to attach the preloader animation into the content-wrapper
-    | element and avoid overlapping it with the sidebars and the top navbar.
-    |
-    | For detailed instructions you can look the preloader section here:
-    | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/Basic-Configuration
-    |
-    */
-
-    'preloader' => [
-        'enabled' => true,
-        'mode' => 'fullscreen',
-        'img' => [
-            'path' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
-            'alt' => 'AdminLTE Preloader Image',
-            'effect' => 'animation__shake',
-            'width' => 60,
-            'height' => 60,
-        ],
-    ],
+    'logo_img_alt' => 'NotifyDesk Logo',
 
     /*
     |--------------------------------------------------------------------------
     | User Menu
     |--------------------------------------------------------------------------
-    |
-    | Here you can activate and change the user menu.
-    |
-    | For detailed instructions you can look the user menu section here:
-    | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/Basic-Configuration
-    |
     */
 
     'usermenu_enabled' => true,
-    'usermenu_header' => false,
+    'usermenu_header' => true,
     'usermenu_header_class' => 'bg-primary',
-    'usermenu_image' => false,
-    'usermenu_desc' => false,
-    'usermenu_profile_url' => false,
+    'usermenu_image' => true,
+    'usermenu_desc' => true,
+    'usermenu_profile_url' => false, // ✅ Disabled to avoid adminlte_profile_url() error
 
     /*
     |--------------------------------------------------------------------------
     | Layout
     |--------------------------------------------------------------------------
-    |
-    | Here we change the layout of your admin panel.
-    |
-    | For detailed instructions you can look the layout section here:
-    | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/Layout-and-Styling-Configuration
-    |
     */
 
     'layout_topnav' => null,
     'layout_boxed' => null,
-    'layout_fixed_sidebar' => null,
-    'layout_fixed_navbar' => null,
+    'layout_fixed_sidebar' => true,
+    'layout_fixed_navbar' => true,
     'layout_fixed_footer' => null,
     'layout_dark_mode' => null,
 
     /*
     |--------------------------------------------------------------------------
-    | Authentication Views Classes
+    | Authentication Routes
     |--------------------------------------------------------------------------
-    |
-    | Here you can change the look and behavior of the authentication views.
-    |
-    | For detailed instructions you can look the auth classes section here:
-    | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/Layout-and-Styling-Configuration
-    |
     */
 
-    'classes_auth_card' => 'card-outline card-primary',
-    'classes_auth_header' => '',
-    'classes_auth_body' => '',
-    'classes_auth_footer' => '',
-    'classes_auth_icon' => '',
-    'classes_auth_btn' => 'btn-flat btn-primary',
+    'auth_password_reset_url' => 'password/reset',
+    'auth_password_change_url' => 'profile/password',
+    'auth_register_url' => 'register',
+    'auth_logout_url' => 'logout',
+    'auth_profile_url' => 'profile',
+    'auth_login_url' => 'login',
+    'auth_dashboard_url' => 'dashboard',
 
     /*
     |--------------------------------------------------------------------------
-    | Admin Panel Classes
+    | Classes
     |--------------------------------------------------------------------------
-    |
-    | Here you can change the look and behavior of the admin panel.
-    |
-    | For detailed instructions you can look the admin panel classes here:
-    | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/Layout-and-Styling-Configuration
-    |
     */
 
     'classes_body' => '',
@@ -206,12 +95,6 @@ return [
     |--------------------------------------------------------------------------
     | Sidebar
     |--------------------------------------------------------------------------
-    |
-    | Here we can modify the sidebar of the admin panel.
-    |
-    | For detailed instructions you can look the sidebar section here:
-    | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/Layout-and-Styling-Configuration
-    |
     */
 
     'sidebar_mini' => 'lg',
@@ -226,171 +109,123 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Control Sidebar (Right Sidebar)
+    | Menu
     |--------------------------------------------------------------------------
-    |
-    | Here we can modify the right sidebar aka control sidebar of the admin panel.
-    |
-    | For detailed instructions you can look the right sidebar section here:
-    | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/Layout-and-Styling-Configuration
-    |
-    */
-
-    'right_sidebar' => false,
-    'right_sidebar_icon' => 'fas fa-cogs',
-    'right_sidebar_theme' => 'dark',
-    'right_sidebar_slide' => true,
-    'right_sidebar_push' => true,
-    'right_sidebar_scrollbar_theme' => 'os-theme-light',
-    'right_sidebar_scrollbar_auto_hide' => 'l',
-
-    /*
-    |--------------------------------------------------------------------------
-    | URLs
-    |--------------------------------------------------------------------------
-    |
-    | Here we can modify the url settings of the admin panel.
-    |
-    | For detailed instructions you can look the urls section here:
-    | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/Basic-Configuration
-    |
-    */
-
-    'use_route_url' => false,
-    'dashboard_url' => 'home',
-    'logout_url' => 'logout',
-    'login_url' => 'login',
-    'register_url' => 'register',
-    'password_reset_url' => 'password/reset',
-    'password_email_url' => 'password/email',
-    'profile_url' => false,
-    'disable_darkmode_routes' => false,
-
-    /*
-    |--------------------------------------------------------------------------
-    | Laravel Asset Bundling
-    |--------------------------------------------------------------------------
-    |
-    | Here we can enable the Laravel Asset Bundling option for the admin panel.
-    | Currently, the next modes are supported: 'mix', 'vite' and 'vite_js_only'.
-    | When using 'vite_js_only', it's expected that your CSS is imported using
-    | JavaScript. Typically, in your application's 'resources/js/app.js' file.
-    | If you are not using any of these, leave it as 'false'.
-    |
-    | For detailed instructions you can look the asset bundling section here:
-    | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/Other-Configuration
-    |
-    */
-
-    'laravel_asset_bundling' => false,
-    'laravel_css_path' => 'css/app.css',
-    'laravel_js_path' => 'js/app.js',
-
-    /*
-    |--------------------------------------------------------------------------
-    | Menu Items
-    |--------------------------------------------------------------------------
-    |
-    | Here we can modify the sidebar/top navigation of the admin panel.
-    |
-    | For detailed instructions you can look here:
-    | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/Menu-Configuration
-    |
     */
 
     'menu' => [
-        // Navbar items:
+        // Search Bar
         [
-            'type' => 'navbar-search',
-            'text' => 'search',
-            'topnav_right' => true,
-        ],
-        [
-            'type' => 'fullscreen-widget',
-            'topnav_right' => true,
+            'text' => 'Search',
+            'search' => true,
+            'top' => true,
         ],
 
-        // Sidebar items:
+        // Dashboard
         [
-            'type' => 'sidebar-menu-search',
-            'text' => 'search',
-        ],
-        [
-            'text' => 'blog',
-            'url' => 'admin/blog',
-            'can' => 'manage-blog',
-        ],
-        [
-            'text' => 'pages',
-            'url' => 'admin/pages',
-            'icon' => 'far fa-fw fa-file',
-            'label' => 4,
+            'text' => 'Dashboard',
+            'route' => 'home',
+            'icon' => 'fas fa-tachometer-alt',
+            'active' => ['home'],
+            'label' => 'Main',
             'label_color' => 'success',
         ],
-        ['header' => 'account_settings'],
+
+        // Campaigns Section
         [
-            'text' => 'profile',
-            'url' => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user',
+            'header' => 'CAMPAIGNS',
         ],
         [
-            'text' => 'change_password',
-            'url' => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
+            'text' => 'All Campaigns',
+            'route' => 'campaigns.index',
+            'icon' => 'fas fa-rocket',
+            'active' => ['campaigns.*'],
         ],
         [
-            'text' => 'multilevel',
-            'icon' => 'fas fa-fw fa-share',
-            'submenu' => [
-                [
-                    'text' => 'level_one',
-                    'url' => '#',
-                ],
-                [
-                    'text' => 'level_one',
-                    'url' => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url' => '#',
-                        ],
-                        [
-                            'text' => 'level_two',
-                            'url' => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url' => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url' => '#',
-                                ],
-                            ],
-                        ],
-                    ],
-                ],
-                [
-                    'text' => 'level_one',
-                    'url' => '#',
-                ],
-            ],
+            'text' => 'Create Campaign',
+            'route' => 'campaigns.create',
+            'icon' => 'fas fa-plus-circle',
+            'label' => 'New',
+            'label_color' => 'success',
         ],
-        ['header' => 'labels'],
+
+        // Messages Section
         [
-            'text' => 'important',
-            'icon_color' => 'red',
-            'url' => '#',
+            'header' => 'MESSAGES',
         ],
         [
-            'text' => 'warning',
-            'icon_color' => 'yellow',
-            'url' => '#',
+            'text' => 'Email',
+            'route' => 'messages.create',
+            'routeParameters' => ['channel' => 'email'],
+            'icon' => 'fas fa-envelope',
+            'icon_color' => 'primary',
         ],
         [
-            'text' => 'information',
-            'icon_color' => 'cyan',
-            'url' => '#',
+            'text' => 'SMS',
+            'route' => 'messages.create',
+            'routeParameters' => ['channel' => 'sms'],
+            'icon' => 'fas fa-sms',
+            'icon_color' => 'warning',
+        ],
+        [
+            'text' => 'WhatsApp',
+            'route' => 'messages.create',
+            'routeParameters' => ['channel' => 'whatsapp'],
+            'icon' => 'fab fa-whatsapp',
+            'icon_color' => 'success',
+        ],
+        [
+            'text' => 'Bulk Messages',
+            'route' => 'messages.bulk',
+            'icon' => 'fas fa-paper-plane',
+            'label' => 'Bulk',
+            'label_color' => 'info',
+        ],
+
+        // Contacts Section
+        [
+            'header' => 'CONTACTS',
+        ],
+        [
+            'text' => 'All Contacts',
+            'route' => 'contacts.index',
+            'icon' => 'fas fa-address-book',
+        ],
+        [
+            'text' => 'Import Contacts',
+            'route' => 'contacts.import',
+            'icon' => 'fas fa-file-import',
+        ],
+        [
+            'text' => 'Groups',
+            'route' => 'contacts.groups',
+            'icon' => 'fas fa-users',
+        ],
+
+        // Analytics Section
+        [
+            'header' => 'ANALYTICS',
+        ],
+        [
+            'text' => 'Reports',
+            'route' => 'analytics.reports',
+            'icon' => 'fas fa-chart-bar',
+        ],
+        [
+            'text' => 'Performance',
+            'route' => 'analytics.performance',
+            'icon' => 'fas fa-chart-pie',
+        ],
+
+        // Account Settings Section
+        [
+            'header' => 'ACCOUNT SETTINGS',
+        ],
+        [
+            'text' => 'My Profile',
+            'route' => 'profile.index',
+            'icon' => 'fas fa-user-circle',
+            'active' => ['profile.*'],
         ],
     ],
 
@@ -398,12 +233,6 @@ return [
     |--------------------------------------------------------------------------
     | Menu Filters
     |--------------------------------------------------------------------------
-    |
-    | Here we can modify the menu filters of the admin panel.
-    |
-    | For detailed instructions you can look the menu filters section here:
-    | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/Menu-Configuration
-    |
     */
 
     'filters' => [
@@ -418,19 +247,13 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Plugins Initialization
+    | Plugins
     |--------------------------------------------------------------------------
-    |
-    | Here we can modify the plugins used inside the admin panel.
-    |
-    | For detailed instructions you can look the plugins section here:
-    | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/Plugins-Configuration
-    |
     */
 
     'plugins' => [
         'Datatables' => [
-            'active' => false,
+            'active' => true,
             'files' => [
                 [
                     'type' => 'js',
@@ -450,7 +273,7 @@ return [
             ],
         ],
         'Select2' => [
-            'active' => false,
+            'active' => true,
             'files' => [
                 [
                     'type' => 'js',
@@ -460,42 +283,52 @@ return [
                 [
                     'type' => 'css',
                     'asset' => false,
-                    'location' => '//cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.css',
+                    'location' => '//cdnjs.cloudflare.com/ajax/libs/select2/4.0.3/css/select2.min.css',
                 ],
             ],
         ],
         'Chartjs' => [
-            'active' => false,
+            'active' => true,
             'files' => [
                 [
                     'type' => 'js',
                     'asset' => false,
-                    'location' => '//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.bundle.min.js',
+                    'location' => '//cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js',
+                ],
+            ],
+        ],
+        'iCheck' => [
+            'active' => true,
+            'files' => [
+                [
+                    'type' => 'js',
+                    'asset' => false,
+                    'location' => '//cdnjs.cloudflare.com/ajax/libs/icheck/1.0.2/icheck.min.js',
+                ],
+                [
+                    'type' => 'css',
+                    'asset' => false,
+                    'location' => '//cdnjs.cloudflare.com/ajax/libs/icheck/1.0.2/skins/square/blue.css',
                 ],
             ],
         ],
         'Sweetalert2' => [
-            'active' => false,
+            'active' => true,
             'files' => [
                 [
                     'type' => 'js',
                     'asset' => false,
-                    'location' => '//cdn.jsdelivr.net/npm/sweetalert2@8',
+                    'location' => '//cdn.jsdelivr.net/npm/sweetalert2@11',
                 ],
             ],
         ],
-        'Pace' => [
-            'active' => false,
+        'Moment' => [
+            'active' => true,
             'files' => [
-                [
-                    'type' => 'css',
-                    'asset' => false,
-                    'location' => '//cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/blue/pace-theme-center-radar.min.css',
-                ],
                 [
                     'type' => 'js',
                     'asset' => false,
-                    'location' => '//cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js',
+                    'location' => '//cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js',
                 ],
             ],
         ],
@@ -505,13 +338,6 @@ return [
     |--------------------------------------------------------------------------
     | IFrame
     |--------------------------------------------------------------------------
-    |
-    | Here we change the IFrame mode configuration. Note these changes will
-    | only apply to the view that extends and enable the IFrame mode.
-    |
-    | For detailed instructions you can look the iframe mode section here:
-    | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/IFrame-Mode-Configuration
-    |
     */
 
     'iframe' => [
@@ -538,13 +364,39 @@ return [
     |--------------------------------------------------------------------------
     | Livewire
     |--------------------------------------------------------------------------
-    |
-    | Here we can enable the Livewire support.
-    |
-    | For detailed instructions you can look the livewire here:
-    | https://github.com/jeroennoten/Laravel-AdminLTE/wiki/Other-Configuration
-    |
     */
 
     'livewire' => false,
+
+    /*
+    |--------------------------------------------------------------------------
+    | Additional CSS
+    |--------------------------------------------------------------------------
+    */
+
+    'extra_css' => [
+        'css/custom.css',
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Additional JS
+    |--------------------------------------------------------------------------
+    */
+
+    'extra_js' => [
+        'js/custom.js',
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Right Sidebar
+    |--------------------------------------------------------------------------
+    */
+
+    'right_sidebar' => false,
+    'right_sidebar_push' => false,
+    'right_sidebar_scrollbar_theme' => 'os-theme-light',
+    'right_sidebar_scrollbar_auto_hide' => 'l',
+
 ];
